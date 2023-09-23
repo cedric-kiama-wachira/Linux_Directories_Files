@@ -1,0 +1,18 @@
+What is the top-level directory in Linux? the answer is / 
+In what form does Linux organise files and directories? the answer is filesystem trees
+What is the command to print your current working directory? the answer is pwd 
+What is the command to climb up one directory? the answer is cd ..
+ Absolute paths always start out with the root directory /. Then we specify the sub-directories we want to descend into, /home/bob/Documents/Invoice.pdf is an example of such a path. In this case, first home, then bob, then Documents. We can see the sub-directory names are separated by a / and we finally get to the file we want to access i.e Invoice.pdf. An absolute path can end with the name of a file or a directory. As per the example given above If we'd want to delete the Documents directory, how would we specify the path? the answer is /home/bob/Documents
+Create a directory named lfcs under /home/bob directory the answer is mkdir ~/lfcs
+Create a blank file named lfcs.txt under /home/bob/lfcs directory the answer is touch /home/bob/lfcs/lfcs.txt
+Copy /tmp/Invoice directory (including all its contents) to /home/bob directory. The answer is cp -r /tmp/Invoice/ /home/bob
+Copy /home/bob/myfile.txt file to /home/bob/data/ directory, make sure to preserve its attributes. The answer is cp -a /home/bob/myfile.txt /home/bob/data/
+Copy the /home/bob/lfcs directory (including all its content) into /home/bob/old-data/ directory. The answer is cp -R /home/bob/lfcs/ /home/bob/old-data/
+Delete /home/bob/lfcs/lfcs.txt file. rm -Rf /home/bob/lfcs/lfcs.txt
+Move all content of /home/bob/lfcs directory to /home/bob/new-data/ directory. The answer is mv /home/bob/lfcs/* /home/bob/new-data/
+Delete directory /home/bob/lfcs. The answer is rmdir /home/bob/lfcs
+Create a soft link to /tmp directory. Create this link in /home/bob directory and call it link_to_tmp. The answer is ln -s /tmp/ /home/bob/link_to_tmp to check if link is created readlink link_to_tmp
+Create a hard link to /tmp/hlink file. Create this link in /home/bob/ directory and call it hlink. The answer is ln /tmp/hlink /home/bob/hlink
+There is a file called /home/bob/new_file, rename this to /home/bob/old_file. The answer is mv /home/bob/new_file /home/bob/old_file
+Create a directory named 9 under /tmp/1/2/3/4/5/6/7/8 directory. Please note that the structure of sub-directories, from 1 to 8 does not exist. However, mkdir has a command line option to automatically create all of these sub-directories automatically in one shot, instead of 9 consecutive commands. This option is described in the help output or manual pages as make parent directories as needed. Find out what the correct option is and use it to create the directory in one shot. The answer is: mkdir -p /tmp/1/2/3/4/5/6/7/8/9
+ls -l shows you the time when a file has been last modified, but it only shows you the hour and the minute, usually in a form like 17:53. Find another way to make ls display the full/exact last modified time for the files in /home/bob directory. The answer is ls --full-time /home/bob/*
